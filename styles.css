@@ -1,0 +1,30 @@
+
+.paragraph
+{
+    color:lightsalmon;
+}
+
+h2
+{
+    text-align: center;
+    color: lightcoral
+}
+
+table
+{
+    border: 5px solid rgba(168, 118, 84, 0.856);
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+td
+{
+    border: 2px dotted black;
+    padding: 10px; 
+}
+
+.headRow
+{
+    background-color: rgb(199, 192, 134);
+}

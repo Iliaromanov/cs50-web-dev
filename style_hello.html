@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!--3 ways to add css style: In-line, style tag in head, link tag to css file in head-->
+
 <html>
     <head>
         <title>
@@ -10,21 +12,13 @@
             {
                 font-family: sans-serif;
             }
-
-            .paragraph
-            {
-                color:lightsalmon;
-            }
-
-            h2
-            {
-                text-align: center;
-                color: lightcoral
-            }
         </style>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
+
     <body style="color: red; background-color: rgb(243, 239, 202);">
-        <h1 style="text-align: center;">Hello, world!</h1>
+        <h1 style="text-align: center; border: 1px solid burlywood;">Hello, world!</h1>
 
         <p style="text-align: center; font-size: large;">Look at this nice webpage!</p>
 
@@ -35,6 +29,35 @@
         <h2 class="subsect">Subsection 2</h2>
 
         <p class="paragraph">Kapow! More text!!! (wow good job bro. Keep up the good work.)</p>
+    </body>
+
+    <body>
+        <h2 class="subsect">Table Section</h2>
+        <table>
+            <tr class="headRow subsect">
+                <th>Type 1</th>
+                <th>Type 2</th>
+                <th>Type 3</th>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+            </tr>
+            <tr>
+                <td>cell 4</td>
+                <td>cell 5</td>
+                <td>cell 6</td>
+            </tr>
+            <tr>
+                <td>cell 7</td>
+                <td>cell 8</td>
+                <td>cell 9</td>
+            </tr>
+        </table>
+        <div class="alert alert-primary" role="alert">
+           Look! I got alerts on here too!
+        </div>
     </body>
 </html>
 
