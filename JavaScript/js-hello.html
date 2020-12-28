@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Hello!
+        </title>
+        <script>
+            function greet()
+            {
+                let name = document.querySelector('#name').value;
+                if (name != "")
+                {
+                    document.querySelector('#result').innerHTML = "Wow there " + name + "! You actually did something!";
+                }
+                else
+                {
+                    alert("Put your name in the box please!!!!!!!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false">
+            <input type="text" id="name">
+            <input type="submit" value="Say hello!">
+        </form>>
+        <div id="result">
+            Nothing to see here for now. Sorry, friend.
+        </div>
+    </body>
+</html>

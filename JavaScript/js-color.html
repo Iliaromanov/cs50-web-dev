@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Color
+        </title>
+    </head>
+    <body>
+        <button id="red">R</button>
+        <button id="green">G</button>
+        <button id="blue">B</button>
+        <script>
+            let r = 0;
+            let g = 0;
+            let b = 0;
+            let body = document.querySelector('body')
+
+            document.querySelector('#red').onclick = function()
+            {
+                r += 10;
+                body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            }
+
+            document.querySelector('#green').onclick = function()
+            {
+                g += 10;
+                body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            }
+
+            document.querySelector('#blue').onclick = function()
+            {
+                b += 10;
+                body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            }
+        </script>
+    </body>
+</html>

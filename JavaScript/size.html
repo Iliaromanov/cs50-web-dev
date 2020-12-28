@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Size
+        </title>
+    </head>
+    <body>
+        <p>This is some text.</p>
+        <select id="size">
+            <option value="Large">Large</option>
+            <option value="initial" selected>Medium</option>
+            <option value="small">Small</option>
+        </select>
+        <script>
+            document.querySelector('#size').onchange = function() 
+            {
+                //'this' keyword represents the object that triggered the event
+                document.querySelector('p').style.fontSize = this.value;
+            }
+        </script>
+    </body>
+</html>

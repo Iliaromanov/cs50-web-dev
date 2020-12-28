@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Counter
+        </title>
+        <script>
+            let counter = 0;
+            const count = () =>
+            {
+                counter++;
+                document.getElementById('counter').innerHTML = counter
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="count(); return false;">
+            <input type="submit" value="Start Count">
+        </form>
+        <div>
+            <p id="counter">0</p>
+        </div>
+    </body>
+</html>
