@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <br/>
+    <header>
+        <h1 style="text-align: center;"><b>Hello, World!</b></h1>
+    </header>
+    <main>
+        <p>You are a {{ num }}/10</p>
+        <div>
+            {% if num <= 5 %}
+                Tough Luck!
+            {% else %}
+                Nicee!!!
+            {% endif %}
+        </div>
+
+        <hr/>
+        <br/>
+        <form action="/hello">
+            <input name="name" type="text">
+            <input type="submit">
+        </form>
+    </main>
+{% endblock %}
