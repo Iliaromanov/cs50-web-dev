@@ -1,23 +1,18 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html>
-    <head>
-        <title>Registration</title>
-    </head>
-    <body>
-        <header>
-            <h1>Registered:</h1>
-        </header>
-        <main>
-            <ul>
-                {% for row in rows %}
-                    <li>{{ row["name"] }}, {{ row["email"] }}</li>
-                {% endfor %}
-            </ul>
-        </main>
-        <hr/><br/>
-        <footer>
-            <a href="/register">Register</a>
-        </footer>
-    </body>
-</html>
+{% block body %}
+    <header>
+        <h1>Registered:</h1>
+    </header>
+    <main>
+        <ul>
+            {% for row in rows %}
+                <li>{{ row["name"] }}, {{ row["email"] }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <hr/><br/>
+    <footer>
+        <a href="/register">Register</a>
+    </footer>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <header><h1>Register Here:</h1></header>
+    <main>
+        <form action="/register" method="POST">
+            <input id="name" type="text" name="name" placeholder="Name">
+            <input id="email" type="text" name="email" placeholder="Email Adress">
+            <input id="submit" type="submit" disabled>
+        </form>
+    </main>
+{% endblock %}
+
+{% block script %}
+let name = document.querySelector("#name");
+let email = document.querySelector("#email")
+
+    name.onkeyup = function()
+    {
+        if (name.value === "" || email.value === "")
+        {
+            document.querySelector("#submit").disabled = true;
+        }
+        else
+        {
+            document.querySelector("#submit").disabled = false;
+        }
+    }
+
+    email.onkeyup = function()
+    {
+        if (name.value === "" || email.value === "")
+        {
+            document.querySelector("#submit").disabled = true;
+        }
+        else
+        {
+            document.querySelector("#submit").disabled = false;
+        }
+    }
+{% endblock %}

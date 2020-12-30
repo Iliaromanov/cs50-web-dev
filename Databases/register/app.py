@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 import sqlite3
 
 app = Flask(__name__)
@@ -13,4 +13,17 @@ def index():
     registered = c.fetchall()
     return render_template("index.html", rows=registered)
 
-
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        name = request.form.get("name")
+        email = request.form.get("email")
+        query = """
+                INSERT INTO registrants (name, email)
+                VALUES (?, ?)
+                """
+        db.execute(query, (name, email))
+        db.commit()
+        return redirect("/")
