@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        #grid {
+            display: grid;
+            background-color: coral;
+            padding: 20px;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            grid-template-columns: auto auto auto 50px;
+            grid-template-rows: 100px;
+            width: 20%;
+        }
+
+        #grid-2 {
+            display: grid;
+            background-color: coral;
+            padding: 20px;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            grid-template-rows: 200px auto;
+        }
+
+        .grid_item {
+            background-color: #f8ecec;
+            padding: 10px;
+            text-align: center;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+        <div class="grid_item">7</div>
+        <div class="grid_item">8</div>
+    </div>
+
+    <div id="grid-2" style="margin-top: 20px">
+        <div class="grid_item" style="text-align: left">Chat history here</div>
+        <div class="grid_item">
+            <form style="float: left">
+                <input type="text">
+                <button type="submit" >Send</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
